@@ -1,0 +1,126 @@
+{
+  "" : {
+    "const-values" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary.swiftconstvalues",
+    "dependencies" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary.d",
+    "diagnostics" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary.dia",
+    "emit-module-dependencies" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary-emit-module.dia",
+    "pch" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCool-primary.swiftdeps"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/Shared/FanControlProtocol.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanControlProtocol.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanControlProtocol.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanControlProtocol.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/Shared/SMC.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMC.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMC.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMC.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/ContentView.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/FanCurve.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanCurve.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanCurve.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanCurve.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/HardwareInventory.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareInventory.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareInventory.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareInventory.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/HardwareMonitor.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareMonitor.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareMonitor.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HardwareMonitor.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/InstallLocation.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/InstallLocation.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/InstallLocation.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/InstallLocation.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/Preferences.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Preferences.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Preferences.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Preferences.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/PrivilegedFanControl.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/PrivilegedFanControl.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/PrivilegedFanControl.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/PrivilegedFanControl.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/SMCKeyCatalog.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMCKeyCatalog.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMCKeyCatalog.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SMCKeyCatalog.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/SampleHistory.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SampleHistory.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SampleHistory.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SampleHistory.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/SensorModels.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorModels.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorModels.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorModels.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/SensorProbe.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorProbe.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorProbe.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorProbe.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Core/ShutdownGuard.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ShutdownGuard.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ShutdownGuard.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ShutdownGuard.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Design/Theme.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Theme.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Theme.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/Theme.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/SiliCoolApp.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCoolApp.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCoolApp.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SiliCoolApp.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/ControlDeck.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ControlDeck.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ControlDeck.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/ControlDeck.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/CurveEditor.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/CurveEditor.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/CurveEditor.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/CurveEditor.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/FanGauge.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanGauge.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanGauge.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/FanGauge.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/HistoryChart.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HistoryChart.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HistoryChart.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/HistoryChart.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/SensorPanel.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorPanel.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorPanel.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SensorPanel.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/SettingsPanel.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SettingsPanel.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SettingsPanel.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/SettingsPanel.o"
+  },
+  "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/nikunjmathur/Developer/SiliCool/build/dd/Build/Intermediates.noindex/SiliCool.build/Release/SiliCool.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

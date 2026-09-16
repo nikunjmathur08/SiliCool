@@ -1,0 +1,40 @@
+{
+  "source": "/Users/nikunjmathur/Developer/SiliCool/SiliCool/Views/ControlDeck.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "rpm",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "Fan speed by temperature",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 132
+        }
+      },
+      {
+        "comment": "",
+        "key": "Target",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "Both fans",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 200
+        }
+      }
+    ]
+  },
+  "version": 1
+}

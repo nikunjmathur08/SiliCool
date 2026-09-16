@@ -1,0 +1,17 @@
+SiliCool/Design/Theme.swift
+SiliCool/Views/ControlDeck.swift
+SiliCool/Views/SensorPanel.swift
+SiliCool/Views/HistoryChart.swift
+SiliCool/Views/CurveEditor.swift
+SiliCool/Core/SensorModels.swift
+SiliCool/Core/SampleHistory.swift
+SiliCool/Core/FanCurve.swift
+SiliCool/Core/Preferences.swift
+SiliCool/Core/HardwareInventory.swift
+SiliCool/Core/SMCKeyCatalog.swift
+SiliCool/Core/SensorProbe.swift
+SiliCool/Core/HardwareMonitor.swift
+SiliCool/Core/ShutdownGuard.swift
+SiliCool/Core/PrivilegedFanControl.swift
+Shared/SMC.swift
+Shared/FanControlProtocol.swift

@@ -1,0 +1,48 @@
+{
+  "source": "/Users/nikunjmathur/Developer/SiliCool/SiliCool/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "SiliCool",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "Back to sensors",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Settings",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quitting returns every fan to automatic control",
+        "location": {
+          "startingColumn": 19,
+          "startingLine": 147
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quit",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 139
+        }
+      }
+    ]
+  },
+  "version": 1
+}

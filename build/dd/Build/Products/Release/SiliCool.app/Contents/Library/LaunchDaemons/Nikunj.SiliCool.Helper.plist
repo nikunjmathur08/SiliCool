@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>Nikunj.SiliCool.Helper</string>
+
+	<!-- Path relative to the app bundle root. SMAppService-only key. -->
+	<key>BundleProgram</key>
+	<string>Contents/MacOS/SiliCoolHelper</string>
+
+	<!-- Without this there is no Mach service and XPC connections fail with
+	     "No such process". The key must match the app's machServiceName. -->
+	<key>MachServices</key>
+	<dict>
+		<key>Nikunj.SiliCool.Helper</key>
+		<true/>
+	</dict>
+
+	<!-- Makes the Login Items entry show SiliCool's name and icon rather than
+	     a bare executable name. Requires a matching Team ID. -->
+	<key>AssociatedBundleIdentifiers</key>
+	<array>
+		<string>Nikunj.SiliCool</string>
+	</array>
+
+	<!-- Launch on demand when SiliCool connects, and let it exit afterwards. -->
+	<key>RunAtLoad</key>
+	<false/>
+	<key>KeepAlive</key>
+	<false/>
+</dict>
+</plist>
