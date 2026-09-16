@@ -95,7 +95,7 @@ header.nav .right a.text:hover { color: var(--ink); }
 .hero h1, .hero .lede { margin-inline: auto; }
 .hero h1 { max-width: 15ch; }
 .hero .lede { margin-top: 24px; max-width: 46ch; }
-.hero .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
+.hero .cta-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
 .hero .req { margin-top: 18px; font-size: 13px; color: var(--faint); letter-spacing: -0.01em; }
 .hero .req b { color: var(--muted); font-weight: 600; }
 .showcase {
@@ -304,15 +304,12 @@ details p { color: var(--muted); font-size: 16px; padding-bottom: 26px; max-widt
   border-top: 1px solid var(--line);
   padding: clamp(80px,12vw,140px) 0 40px 0;
   text-align: center;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
 .site-footer .footer-logo {
   width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 28px;
 }
-.site-footer .actions {
+.site-footer .cta-actions {
   display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px;
 }
 .site-footer .req {
@@ -358,7 +355,7 @@ details p { color: var(--muted); font-size: 16px; padding-bottom: 26px; max-widt
 <div class="wrap hero">
   <h1>Fan Control.<br> For&nbsp;&nbsp;silicon.</h1>
   <p class="lede">Every sensor your Mac reports, in your menu bar <br> and the fans macOS never gives you a way to touch.</p>
-  <div class="actions">
+  <div class="cta-actions">
     <a class="btn primary lg" id="download-button" href="#">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M13.1 11.3c-.3.7-.5 1-.8 1.5-.5.7-.8 1.1-1.3 1.1-.5 0-.7-.3-1.3-.3-.6 0-.9.3-1.4.3-.5 0-.9-.4-1.3-1.1-.9-1.3-1.6-3.5-.7-5.1.5-.9 1.3-1.4 2.2-1.4.5 0 1 .3 1.4.3.4 0 1-.4 1.7-.3.3 0 1.1.1 1.7.8-.1.1-1 .6-1 1.8 0 1.3.9 1.7 1 1.8l-.2.6zM9.7 3.5c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.5-.7 1.1-.6 1.8.7 0 1.4-.4 1.8-.8z"/></svg>
       Download for Mac
@@ -573,7 +570,7 @@ details p { color: var(--muted); font-size: 16px; padding-bottom: 26px; max-widt
     <img class="logo footer-logo" src="assets/icon.png" alt="SiliCool icon">
     <h2>Completely open-source</h2>
     <p class="lede" style="margin:22px auto 0;max-width:44ch;">No account, no subscription.<br>Just the numbers your Mac already knows.</p>
-    <div class="actions">
+    <div class="cta-actions">
       <a class="btn primary lg" id="download-button-2" href="#">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M13.1 11.3c-.3.7-.5 1-.8 1.5-.5.7-.8 1.1-1.3 1.1-.5 0-.7-.3-1.3-.3-.6 0-.9.3-1.4.3-.5 0-.9-.4-1.3-1.1-.9-1.3-1.6-3.5-.7-5.1.5-.9 1.3-1.4 2.2-1.4.5 0 1 .3 1.4.3.4 0 1-.4 1.7-.3.3 0 1.1.1 1.7.8-.1.1-1 .6-1 1.8 0 1.3.9 1.7 1 1.8l-.2.6zM9.7 3.5c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.5-.7 1.1-.6 1.8.7 0 1.4-.4 1.8-.8z"/></svg>
         Download for Mac
