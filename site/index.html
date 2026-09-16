@@ -2,8 +2,7 @@
 <meta name="description" content="Fan Control. For Apple silicon. Every sensor your Mac reports, in your menu bar — and the fans macOS never gives you a way to touch.">
 <style>
 /* ── SiliCool ─────────────────────────────────────────────────────────────
-   Light paper, dark product panels, system type. The app's own screenshots
-   are dark, so they sit on the page as objects rather than blending into it.
+   Light paper, dark product panels, system type.
    No webfonts: SF Pro is already on every Mac this ships to.              */
 :root {
   --paper: #fbfdff;
@@ -40,8 +39,8 @@ p { margin: 0; }
 .narrow { max-width: 640px; }
 .lede { font-size: clamp(18px, 1.9vw, 21px); color: var(--muted); letter-spacing: -0.011em; }
 .eyebrow {
-  font-size: 13px; font-weight: 600; letter-spacing: -0.01em; color: var(--accent);
-  margin-bottom: 18px; text-align: center;
+  font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--accent);
+  margin-bottom: 18px; text-align: center; text-transform: uppercase;
 }
 
 /* ── nav ───────────────────────────────────────────────────────────────── */
@@ -68,23 +67,22 @@ header.nav .right a.text:hover { color: var(--ink); }
 /* ── buttons ───────────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-  border-radius: 999px; font-weight: 500; letter-spacing: -0.02em;
-  font-family: inherit; cursor: pointer; border: 1px solid transparent;
-  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+  border-radius: 999px; font-weight: 600; letter-spacing: -0.02em;
+  font-family: inherit; cursor: pointer; border: 1.5px solid transparent;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.btn.primary { background: var(--ink); color: #fff; }
-.btn.primary:hover { background: #14283c; transform: translateY(-1px); }
-.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
-.btn.ghost:hover { border-color: var(--faint); transform: translateY(-1px); }
+.btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+.btn.primary:hover { background: #14283c; border-color: #14283c; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(7,23,39,.22); }
+.btn.ghost { background: var(--paper); color: var(--ink); border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--faint); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(7,23,39,.08); }
 .btn.sm { font-size: 15px; padding: 9px 18px; }
-.btn.lg { font-size: 21px; padding: 15px 30px; }
-.btn.on-dark.ghost { color: var(--panel-ink); border-color: var(--panel-line); }
+.btn.lg { font-size: 17px; padding: 14px 26px; }
+.btn svg { flex: none; }
+.btn.on-dark.ghost { background: transparent; color: var(--panel-ink); border-color: var(--panel-line); }
 .btn.on-dark.ghost:hover { border-color: var(--panel-muted); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-/* ── scroll reveal ─────────────────────────────────────────────────────────
-   Applied only once JS confirms it can undo it, so the page still reads with
-   scripting off and the first frame is never a blank screen.               */
+/* ── scroll reveal ─────────────────────────────────────────────────────────*/
 .js .reveal { opacity: 0; transform: translateY(22px); }
 .js .reveal.shown {
   opacity: 1; transform: none;
@@ -101,8 +99,8 @@ header.nav .right a.text:hover { color: var(--ink); }
 .hero h1, .hero .lede { margin-inline: auto; }
 .hero h1 { max-width: 15ch; }
 .hero .lede { margin-top: 24px; max-width: 46ch; }
-.hero .actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 38px; }
-.hero .req { margin-top: 20px; font-size: 14.5px; color: var(--faint); letter-spacing: -0.01em; }
+.hero .actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
+.hero .req { margin-top: 18px; font-size: 13.5px; color: var(--faint); letter-spacing: -0.01em; }
 .hero .req b { color: var(--muted); font-weight: 600; }
 
 .showcase {
@@ -112,17 +110,17 @@ header.nav .right a.text:hover { color: var(--ink); }
 }
 .showcase video { border-radius: 14px; width: 100%; }
 
-/* ── feature bento rail ────────────────────────────────────────────────── */
+/* ── bento rail ────────────────────────────────────────────────────────── */
 .bento-rail {
   padding: clamp(44px, 6vw, 76px) 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
 }
 .bento-card {
   background: var(--panel);
   border-radius: 20px;
-  padding: 28px 24px 24px;
+  padding: 26px 22px 22px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -130,46 +128,37 @@ header.nav .right a.text:hover { color: var(--ink); }
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.bento-card:hover { transform: translateY(-3px); box-shadow: 0 20px 48px rgba(7,23,39,.22); }
+.bento-card:hover { transform: translateY(-3px); box-shadow: 0 20px 48px rgba(7,23,39,.26); }
 .bento-card .bc-icon {
-  font-size: 26px; line-height: 1;
-  margin-bottom: 4px;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 6px;
 }
+.bento-card .bc-icon svg { width: 28px; height: 28px; }
 .bento-card .bc-title {
-  font-size: 14px; font-weight: 700; letter-spacing: -0.018em;
-  color: var(--panel-accent);
-  line-height: 1.25;
+  font-size: 13.5px; font-weight: 700; letter-spacing: -0.016em;
+  color: var(--panel-accent); line-height: 1.25;
 }
 .bento-card .bc-body {
-  font-size: 13px; color: var(--panel-muted); line-height: 1.45;
+  font-size: 12.5px; color: var(--panel-muted); line-height: 1.5;
 }
 .bento-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  border: 1px solid var(--panel-line);
-  pointer-events: none;
+  content: ""; position: absolute; inset: 0;
+  border-radius: 20px; border: 1px solid var(--panel-line); pointer-events: none;
 }
 
 /* ── sections ──────────────────────────────────────────────────────────── */
 section { padding: clamp(56px, 8vw, 112px) 0; }
 section.tinted { background: var(--tint); }
 
-/* All non-hero headings centered */
-section h2,
-.close h2 {
-  text-align: center;
-  margin-inline: auto;
-  max-width: 22ch;
+/* All section headings + lede: centered */
+section h2, .close h2 {
+  text-align: center; margin-inline: auto; max-width: 24ch;
 }
-section .lede {
-  text-align: center;
-  margin-inline: auto;
-}
+section .lede { text-align: center; margin-inline: auto; }
 section .eyebrow { text-align: center; }
 
-/* dark inset panel */
+/* dark panel */
 .panel {
   background: var(--panel); color: var(--panel-ink);
   border-radius: 28px; padding: clamp(30px, 4.6vw, 68px);
@@ -178,33 +167,41 @@ section .eyebrow { text-align: center; }
 .panel .lede, .panel p { color: var(--panel-muted); }
 .panel .eyebrow { color: var(--panel-accent); }
 
-/* ── data table ────────────────────────────────────────────────────────── */
+/* ── data tables ───────────────────────────────────────────────────────── */
 .scroller { overflow-x: auto; margin-top: 44px; }
-table { width: 100%; border-collapse: collapse; font-size: 16px; min-width: 620px; }
+table { width: 100%; border-collapse: collapse; font-size: 15.5px; }
 th {
-  text-align: left; font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
-  text-transform: uppercase; color: var(--faint); padding: 0 16px 12px 0;
+  text-align: center; font-size: 11.5px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--faint); padding: 0 12px 14px;
   border-bottom: 1px solid var(--line);
 }
-td { padding: 16px 16px 16px 0; border-bottom: 1px solid var(--line); vertical-align: baseline; }
-td.v { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-td.why { color: var(--muted); font-size: 15px; }
+td {
+  padding: 16px 12px; border-bottom: 1px solid var(--line);
+  vertical-align: baseline; text-align: center;
+}
+td:first-child { text-align: left; font-weight: 500; }
+td.v {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap;
+  color: var(--ink);
+}
+td.why { color: var(--muted); font-size: 14.5px; text-align: left; }
+th:first-child { text-align: left; }
 .panel table, .panel th, .panel td { border-color: var(--panel-line); }
 .panel th { color: var(--panel-muted); }
-/* Fix: first column text readable on dark panel */
 .panel td { color: var(--panel-ink); }
-/* Right column stays muted but still readable on dark */
-.panel td.why { color: var(--panel-muted); }
+.panel td.why { color: var(--panel-muted); text-align: left; }
+.panel td.v { color: var(--panel-ink); }
 code {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .88em;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .86em;
   background: var(--tint-deep); padding: 2px 7px; border-radius: 6px;
 }
 .panel code { background: #182029; color: var(--panel-ink); }
 
 /* ── "Taken on" sub-caption ─────────────────────────────────────────────── */
 .taken-on {
-  font-size: 13px; color: var(--faint); letter-spacing: -0.01em;
-  margin-top: 18px; text-align: center;
+  font-size: 12.5px; color: var(--faint); letter-spacing: -0.01em;
+  margin-top: 16px; text-align: center;
 }
 
 /* ── steps ─────────────────────────────────────────────────────────────── */
@@ -217,35 +214,43 @@ code {
 }
 .step h3 { font-size: 20px; letter-spacing: -0.018em; }
 .step p { color: var(--muted); font-size: 15.5px; margin-top: 8px; }
-.dmg-shot { margin-top: 52px; border-radius: 20px; overflow: hidden; box-shadow: 0 24px 60px rgba(7,23,39,.14); }
 
-/* ── "Why does macOS warn" — blue accent card ──────────────────────────── */
+/* ── warn card ──────────────────────────────────────────────────────────── */
+/* Inspired by the Glance "security" blue card style — full-contrast dark
+   heading on vivid blue, with solid-dark muted body (not transparent).    */
 .warn-card {
   margin-top: 44px;
   background: #1a74ff;
   border-radius: 22px;
-  padding: 32px 36px;
+  padding: 36px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  gap: 40px;
   align-items: center;
 }
 @media (max-width: 680px) {
-  .warn-card { grid-template-columns: 1fr; gap: 20px; }
+  .warn-card { grid-template-columns: 1fr; gap: 24px; padding: 28px 26px; }
 }
 .warn-card-left {
   display: flex; align-items: flex-start; gap: 18px;
 }
 .warn-card-icon {
-  font-size: 42px; flex: none; line-height: 1; margin-top: 2px;
+  flex: none; margin-top: 3px;
+}
+.warn-card-icon svg {
+  width: 40px; height: 40px;
 }
 .warn-card-heading {
-  font-size: clamp(18px, 2vw, 23px); font-weight: 800;
-  color: #071727; letter-spacing: -0.022em; line-height: 1.2;
+  font-size: clamp(18px, 2.1vw, 24px); font-weight: 800;
+  /* Solid near-black — full contrast on the blue background */
+  color: #06101a;
+  letter-spacing: -0.022em; line-height: 1.2;
 }
 .warn-card-right {
-  font-size: clamp(15px, 1.4vw, 17px); font-weight: 600;
-  color: rgba(7,23,39,.5); line-height: 1.55; letter-spacing: -0.012em;
+  font-size: clamp(14.5px, 1.4vw, 16.5px); font-weight: 500;
+  /* Solid dark-grey — readable without relying on opacity */
+  color: #1a2c3d;
+  line-height: 1.6; letter-spacing: -0.01em;
 }
 
 /* ── statement ─────────────────────────────────────────────────────────── */
@@ -269,13 +274,56 @@ summary::after {
 details[open] summary::after { transform: rotate(-135deg) translate(-3px, -3px); }
 details p { color: var(--muted); font-size: 16px; padding-bottom: 26px; max-width: 62ch; }
 
-/* ── footer ────────────────────────────────────────────────────────────── */
+/* ── close / cta ────────────────────────────────────────────────────────── */
 .close { text-align: center; padding: clamp(64px, 9vw, 120px) 0; }
-.close .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
-footer { border-top: 1px solid var(--line); padding: 30px 0 56px; }
-footer .row { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; font-size: 14.5px; color: var(--faint); }
-footer a { color: var(--muted); }
-footer a:hover { color: var(--ink); }
+.close .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+.close .req { margin-top: 18px; font-size: 13.5px; color: var(--faint); letter-spacing: -0.01em; }
+
+/* ── footer ────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--tint);
+  border-top: 1px solid var(--line);
+  padding: 56px 0 36px;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px 64px;
+  align-items: start;
+}
+@media (max-width: 600px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+.footer-brand {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.footer-brand .brand-row {
+  display: flex; align-items: center; gap: 10px;
+}
+.footer-brand img { width: 28px; height: 28px; border-radius: 7px; }
+.footer-brand .brand-name { font-weight: 700; font-size: 17px; letter-spacing: -0.02em; }
+.footer-brand .brand-tagline {
+  font-size: 14px; color: var(--muted); max-width: 32ch; line-height: 1.5;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 8px 40px;
+  font-size: 14.5px;
+}
+.footer-links a {
+  color: var(--muted); font-weight: 500; white-space: nowrap;
+  transition: color .15s ease;
+}
+.footer-links a:hover { color: var(--ink); }
+.footer-bottom {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 10px 24px;
+  font-size: 13px; color: var(--faint);
+}
+.footer-bottom a { color: var(--faint); }
+.footer-bottom a:hover { color: var(--muted); }
 </style>
 
 <header class="nav" id="nav">
@@ -286,7 +334,10 @@ footer a:hover { color: var(--ink); }
       <a class="text" href="#reads">What it reads</a>
       <a class="text" href="#install">Install</a>
       <a class="text" href="#faq">FAQ</a>
-      <a class="btn primary sm" id="nav-download" href="#"> Download</a>
+      <a class="btn primary sm" id="nav-download" href="#">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 7l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download
+      </a>
     </div>
   </div>
 </header>
@@ -295,56 +346,123 @@ footer a:hover { color: var(--ink); }
   <h1>Fan Control.<br/> For  silicon.</h1>
   <p class="lede">Every sensor your Mac reports, in your menu bar <br/> and the fans macOS never gives you a way to touch.</p>
   <div class="actions">
-    <a class="btn primary lg" id="download-button" href="#"> Download for Mac</a>
-    <a class="btn ghost lg" href="#reads">See what it reads</a>
+    <a class="btn primary lg" id="download-button" href="#">
+      <!-- Apple SF Symbol: apple.logo approximated -->
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M13.1 11.3c-.3.7-.5 1-.8 1.5-.5.7-.8 1.1-1.3 1.1-.5 0-.7-.3-1.3-.3-.6 0-.9.3-1.4.3-.5 0-.9-.4-1.3-1.1-.9-1.3-1.6-3.5-0.7-5.1.5-.9 1.3-1.4 2.2-1.4.5 0 1 .3 1.4.3.4 0 1-.4 1.7-.3.3 0 1.1.1 1.7.8-.1.1-1 .6-1 1.8 0 1.3.9 1.7 1 1.8l-.2.6zM9.7 3.5c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.5-.7 1.1-.6 1.8.7 0 1.4-.4 1.8-.8z"/></svg>
+      Download for Mac
+    </a>
+    <a class="btn ghost lg" href="https://github.com/nikunjmathur08/SiliCool" target="_blank" rel="noopener">
+      <!-- GitHub mark SVG -->
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
   </div>
-  <p class="req" id="download-meta"><b>3.3 MB</b> · version 1.0 · macOS 14 or later · Apple silicon · free and MIT licensed</p>
+  <p class="req" id="download-meta">macOS 14 or later · Apple silicon · <b>free and MIT licensed</b></p>
 
   <div class="showcase">
     <video src="assets/promo.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
   </div>
 </div>
 
-<!-- ── feature bento rail ── -->
+<!-- ── bento rail ── -->
 <div class="wrap bento-rail reveal">
+
   <div class="bento-card">
-    <div class="bc-icon">📡</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: sensor.tag.radiowaves.forward — represented as a wifi-like radiating icon -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="18" r="2.5" fill="#4da3ff"/>
+        <path d="M9.5 14.5a6.5 6.5 0 0 1 9 0" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M6 11a11 11 0 0 1 16 0" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+      </svg>
+    </div>
     <div class="bc-title">256 live sensors</div>
     <div class="bc-body">Every reading your Mac's SMC and IOKit expose, shown in real time.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">💨</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: fan — two arcs suggesting rotation -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="2.2" fill="#4da3ff"/>
+        <path d="M14 11.8c0-4 2.5-6 4-5 1.5 1-0.5 4.5-2.2 5.2" stroke="#4da3ff" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M16 14.5c3.5 1.8 4.5 4.5 3 5.5s-4-1.5-4.2-3.5" stroke="#4da3ff" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M11.5 15.5c-3.5 1.5-6 .5-6-1.5s3.5-2.5 5.5-1.2" stroke="#4da3ff" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+    </div>
     <div class="bc-title">Two fans, held where you want</div>
     <div class="bc-body">Pin each fan independently. Release one, keep the other — your call.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">〽️</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: waveform.path — a curve chart suggesting fan curve -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 20 C8 20 9 10 13 10 C17 10 18 16 22 14 C24 13 25 11 25 11" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="9" cy="14.5" r="2" fill="#4da3ff" opacity=".35"/>
+        <circle cx="14" cy="11" r="2" fill="#4da3ff" opacity=".7"/>
+        <circle cx="19" cy="13.5" r="2" fill="#4da3ff" opacity=".35"/>
+      </svg>
+    </div>
     <div class="bc-title">Fan curves</div>
     <div class="bc-body">Four anchors at 50, 65, 80 and 95 °C. Drag them or start from a preset.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">🕐</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: clock — circle with hands -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="9.5" stroke="#4da3ff" stroke-width="1.8"/>
+        <path d="M14 9v5.5l3.5 2" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
     <div class="bc-title">10 minutes of history</div>
     <div class="bc-body">A fixed ring buffer at 1 Hz — 14,400 bytes, always in memory.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">🌗</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: circle.lefthalf.fill — half moon for light/dark -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 4.5A9.5 9.5 0 1 0 14 23.5V4.5Z" fill="#4da3ff"/>
+        <circle cx="14" cy="14" r="9.5" stroke="#4da3ff" stroke-width="1.8"/>
+      </svg>
+    </div>
     <div class="bc-title">Light and dark</div>
     <div class="bc-body">Follows your macOS appearance setting automatically.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">🔒</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: network.slash — no connection -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 5l18 18" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M4 11a14 14 0 0 1 7-4" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+        <path d="M17.5 8.5A14 14 0 0 1 24 11" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round" opacity=".5"/>
+        <path d="M8.5 15.5a8 8 0 0 1 4-2.5" stroke="#4da3ff" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="14" cy="21" r="2" fill="#4da3ff"/>
+      </svg>
+    </div>
     <div class="bc-title">No telemetry, ever</div>
     <div class="bc-body">No network code. No analytics. Nothing leaves your Mac.</div>
   </div>
+
   <div class="bento-card">
-    <div class="bc-icon">⚡</div>
+    <div class="bc-icon">
+      <!-- SF Symbol: memorychip — small chip outline -->
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="7" width="14" height="14" rx="3" stroke="#4da3ff" stroke-width="1.8"/>
+        <rect x="11" y="11" width="6" height="6" rx="1.5" fill="#4da3ff" opacity=".5"/>
+        <path d="M11 5v2M17 5v2M11 21v2M17 21v2M5 11h2M5 17h2M21 11h2M21 17h2" stroke="#4da3ff" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
     <div class="bc-title">15 MB resident</div>
     <div class="bc-body">The gauge pauses when the panel is closed. Lightweight by design.</div>
   </div>
+
 </div>
 
-<!-- ── what it reads — one panel, no screenshots ── -->
+<!-- ── what it reads — one panel ── -->
 <section id="reads" class="wrap">
   <div class="panel reveal">
     <div class="eyebrow">What it reads</div>
@@ -407,10 +525,17 @@ footer a:hover { color: var(--ink); }
       </div>
     </div>
 
-    <!-- Blue split-card styled like image 3 -->
+    <!-- Blue warning card — full-contrast on blue, solid text colours -->
     <div class="warn-card">
       <div class="warn-card-left">
-        <div class="warn-card-icon">⚠️</div>
+        <div class="warn-card-icon">
+          <!-- SF Symbol: lock.shield — shield with lock -->
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4L7 9v10c0 8.3 5.5 16 13 18 7.5-2 13-9.7 13-18V9L20 4z" stroke="#06101a" stroke-width="2.2" stroke-linejoin="round"/>
+            <rect x="15" y="18" width="10" height="8" rx="2" stroke="#06101a" stroke-width="2" fill="none"/>
+            <path d="M17 18v-2a3 3 0 0 1 6 0v2" stroke="#06101a" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div class="warn-card-heading">Why does macOS warn about it?</div>
       </div>
       <div class="warn-card-right">
@@ -442,7 +567,7 @@ footer a:hover { color: var(--ink); }
   </div>
 </section>
 
-<!-- ── force quit statement (reframed copy) ── -->
+<!-- ── force quit statement ── -->
 <section class="wrap statement reveal">
   <h2>Force Quit cuts the line. Every other exit hands the fans back.</h2>
   <p class="lede"><code>SIGKILL</code> is the one signal no process can catch — the OS terminates it before it can react. If you force quit SiliCool while a fan is held, the hold persists because nothing remains to release it. To recover: reopen SiliCool and press <strong>Release</strong>, or restart your Mac. Every other exit path — quitting normally, logging out, sleeping, <code>Ctrl-C</code>, or a regular <code>kill</code> — returns the fans to automatic first.</p>
@@ -483,32 +608,56 @@ footer a:hover { color: var(--ink); }
   </div>
 </section>
 
+<!-- ── CTA / close ── -->
 <div class="wrap close reveal">
   <h2>Completely open-source</h2>
   <p class="lede" style="margin:22px auto 0; max-width:44ch;">No account, no subscription. <br/> Just the numbers your Mac already knows.</p>
   <div class="actions">
-    <a class="btn primary lg" id="download-button-2" href="#"> Download for Mac</a>
+    <a class="btn primary lg" id="download-button-2" href="#">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M13.1 11.3c-.3.7-.5 1-.8 1.5-.5.7-.8 1.1-1.3 1.1-.5 0-.7-.3-1.3-.3-.6 0-.9.3-1.4.3-.5 0-.9-.4-1.3-1.1-.9-1.3-1.6-3.5-0.7-5.1.5-.9 1.3-1.4 2.2-1.4.5 0 1 .3 1.4.3.4 0 1-.4 1.7-.3.3 0 1.1.1 1.7.8-.1.1-1 .6-1 1.8 0 1.3.9 1.7 1 1.8l-.2.6zM9.7 3.5c.4-.5.7-1.2.6-1.9-.6 0-1.3.4-1.8.9-.4.5-.7 1.1-.6 1.8.7 0 1.4-.4 1.8-.8z"/></svg>
+      Download for Mac
+    </a>
+    <a class="btn ghost lg" href="https://github.com/nikunjmathur08/SiliCool" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a>
   </div>
-  <p class="req" style="margin-top:22px; color:var(--faint); font-size:14.5px;">macOS 14 or later · Apple silicon</p>
+  <p class="req">macOS 14 or later · Apple silicon</p>
 </div>
 
+<!-- ── footer ── -->
 <footer>
-  <div class="wrap row">
-    <span>SiliCool</span>
-    <a href="privacy.html">Privacy</a>
-    <a href="#download-button">Download</a>
-    <span style="margin-left:auto">Not affiliated with Apple.</span>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-row">
+          <img src="assets/icon.png" alt="SiliCool icon">
+          <span class="brand-name">SiliCool</span>
+        </div>
+        <p class="brand-tagline">Fan control for Apple silicon. Every sensor your Mac reports, in your menu bar.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#reads">What it reads</a>
+        <a href="https://github.com/nikunjmathur08/SiliCool" target="_blank" rel="noopener">GitHub</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/nikunjmathur08/SiliCool/releases" target="_blank" rel="noopener">Releases</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 SiliCool. MIT Licensed.</span>
+      <span>Not affiliated with Apple Inc.</span>
+    </div>
   </div>
 </footer>
 
 <script>
-// One place to change per release.
 const DOWNLOAD_URL = "/downloads/SiliCool.dmg";
 for (const id of ["download-button", "download-button-2", "nav-download"]) {
   document.getElementById(id)?.setAttribute("href", DOWNLOAD_URL);
 }
 
-// Reveal-on-scroll is opt-in.
 document.documentElement.classList.add("js");
 const reveals = document.querySelectorAll(".reveal");
 if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
@@ -525,7 +674,6 @@ if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObs
   reveals.forEach(el => observer.observe(el));
 }
 
-// Sticky nav.
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("stuck", window.scrollY > 12);
 onScroll();
