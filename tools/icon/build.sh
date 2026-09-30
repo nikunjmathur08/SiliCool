@@ -1,15 +1,19 @@
 #!/bin/bash
-# Regenerates the app icon into the asset catalog, and the copies the website
-# and README use.
+# Regenerates the app icon from the source artwork into the asset catalog, and
+# the copies the website and README use. Source artwork: icon.png at the repo
+# root — replace that file and re-run this script to rebrand.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 SET="$ROOT/SiliCool/Assets.xcassets/AppIcon.appiconset"
+SOURCE="$ROOT/icon.png"
 TEMP="$(mktemp -d)"
 trap 'rm -rf "$TEMP"' EXIT
 
+[ -f "$SOURCE" ] || { echo "error: missing $SOURCE (the app icon source artwork)"; exit 1; }
+
 echo "==> Rendering"
 swiftc -O -o "$TEMP/render" "$ROOT/tools/icon/main.swift"
-"$TEMP/render" "$SET"
+"$TEMP/render" "$SET" "$SOURCE"
 
 echo "==> Writing Contents.json"
 python3 - "$SET" <<'PYEOF'

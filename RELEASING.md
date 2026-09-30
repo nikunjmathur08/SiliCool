@@ -75,7 +75,9 @@ title, the instruction text, then:
 ```
 
 That rewrites `packaging/dmg-background.tiff` with both a 1x and a 2x layer, so
-it stays sharp on Retina. Rebuild the disk image to see it.
+it stays sharp on Retina. The small fan mark next to the title is the same
+source artwork as the app icon — `icon.png` at the repo root. Rebuild the disk
+image to see it.
 
 **The window itself** — `scripts/make-dmg.sh`, in the AppleScript block:
 
@@ -100,17 +102,18 @@ After any change:
 
 ### The app icon
 
-`tools/icon/main.swift`, then:
+The source artwork is `icon.png` at the repo root — replace that file, then:
 
 ```bash
 ./tools/icon/build.sh
 ```
 
-It renders all ten sizes into the asset catalog, writes `Contents.json`, and
-updates the copies the website and README use. Blade count and stroke weight
-step down at small sizes on purpose — a 34-blade ring becomes a grey smudge at
-16pt. Check the small end before shipping: the Finder icon and the ⌘-Tab
-switcher are where most people will see it.
+It composites the artwork onto the dark rounded plate, renders all ten sizes
+into the asset catalog, writes `Contents.json`, and updates the copies the
+website and README use. Check the small end before shipping: the Finder icon
+and the ⌘-Tab switcher are where most people will see it. The same file feeds
+the mark in the installer window, so run `./tools/dmg-background/build.sh` too
+after a rebrand.
 
 ### The promo film
 

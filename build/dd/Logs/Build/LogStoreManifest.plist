@@ -48,7 +48,7 @@
 			<key>uniqueIdentifier</key>
 			<string>1F3A9D76-6177-458C-A1A9-5088C915B36B</string>
 		</dict>
-		<key>2FFCC749-1910-4861-BB7D-8FF4789F32B9</key>
+		<key>892DC52F-7EF6-4ED2-9A18-878EB938BD64</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -57,7 +57,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>2FFCC749-1910-4861-BB7D-8FF4789F32B9.xcactivitylog</string>
+			<string>892DC52F-7EF6-4ED2-9A18-878EB938BD64.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -82,13 +82,13 @@
 			<key>signature</key>
 			<string>Building project SiliCool with scheme SiliCool and configuration Release</string>
 			<key>timeStartedRecording</key>
-			<real>811224844.50404596</real>
+			<real>812356593.01633203</real>
 			<key>timeStoppedRecording</key>
-			<real>811224853.44913602</real>
+			<real>812356597.31995404</real>
 			<key>title</key>
 			<string>Building project SiliCool with scheme SiliCool and configuration Release</string>
 			<key>uniqueIdentifier</key>
-			<string>2FFCC749-1910-4861-BB7D-8FF4789F32B9</string>
+			<string>892DC52F-7EF6-4ED2-9A18-878EB938BD64</string>
 		</dict>
 	</dict>
 </dict>

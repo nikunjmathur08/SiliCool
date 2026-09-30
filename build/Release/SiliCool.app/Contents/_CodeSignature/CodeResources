@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/AppIcon.icns</key>
 		<data>
-		hQ/awmEObwLzXOwAholUivB8Z/I=
+		O+AmezqR2dGDEq6/XGANUzLbha0=
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		Rqku9bKlxs5QCcjjzF0Exma12fo=
+		cq5QqpEJ6f6ybocyrC1i9QKArWQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -26,7 +26,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			rwIenKnuMuO4c8xFB+9ixYf5VeM=
+			aWENjJtCisMK4McwQwMkl5gBShY=
 			</data>
 			<key>requirement</key>
 			<string>identifier "Nikunj.SiliCool.Helper" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: nikunjmathur0810@gmail.com (7MDAV9F2X8)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -35,14 +35,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Krt+H9grMo16Iv4TbqSGIwVVLVSjvEzmbrJ00PB6dsY=
+			PwD+YwHN/nAtkyaJbfuPmSsHrEGg6RP7CoBVTVY5Hgw=
 			</data>
 		</dict>
 		<key>Resources/Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lPuAjGjmMGInsbT3/SsVINjnm9wFB0tSJFUvOf4CrBw=
+			nYDd83+J6Uw+ftp/TKu/UH/pXjFZZKd8pm5+LtSHgOA=
 			</data>
 		</dict>
 	</dict>

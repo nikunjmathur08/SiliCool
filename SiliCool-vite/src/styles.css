@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+
+  --color-bg: #fbfdff;
+  --color-fg: #071727;
+  --color-accent: #3499ff;
+  --color-frame: #edeff1;
+  --color-surface: #eeeeef;
+  --color-panel: #0f171f;
+  --color-security: #09090a;
+  --color-card: #1b1c1d;
+  --color-line: #dfe7ef;
+  --color-muted: #0f171f99;
+  --color-caption: #0f171f6a;
+  --color-soft: #d0d1d2;
+  --color-body: #787878;
+  --color-secmuted: #7e848b;
+
+  --animate-strip-glow: strip-glow 3s ease-in-out infinite;
+  --animate-strip-launch: strip-grow 1s cubic-bezier(0.22, 1, 0.36, 1) both,
+    strip-glow 3s ease-in-out infinite;
+}
+
+@keyframes strip-grow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--smh) * var(--h) / 100);
+  }
+}
+
+@keyframes strip-glow {
+  0%,
+  100% {
+    opacity: calc(var(--o) * var(--so) * var(--sr));
+  }
+  10%,
+  16% {
+    opacity: calc(var(--o) * var(--so));
+  }
+  30% {
+    opacity: calc(var(--o) * var(--so) * var(--sr));
+  }
+}
+
+@layer base {
+  :root {
+    --site-max: 1201px;
+    --page-gutter: 60px;
+    --site-width: min(
+      var(--site-max),
+      calc(100% - (2 * var(--page-gutter)))
+    );
+    --gutter: calc((100% - var(--site-width)) / 2);
+
+    --sc: #3499ff;
+    --sw: 17px;
+    --sg: 30px;
+    --smh: 420px;
+    --so: 1;
+    --sr: 0.7;
+    --ss: 50ms;
+    --gs: 15ms;
+    --fh: 440px;
+    --fb: 18px;
+    --fl: 20px;
+
+    --card-scale: 0.92;
+    --card-width: calc(424px * var(--card-scale));
+    --card-height: calc(var(--card-width) * 505 / 424);
+  }
+
+  @media (min-width: 1200px) {
+    :root {
+      --site-max: 1060px;
+      --fh: 460px;
+    }
+  }
+  @media (min-width: 1400px) {
+    :root {
+      --site-max: 1120px;
+    }
+  }
+  @media (min-width: 1600px) {
+    :root {
+      --site-max: 1160px;
+    }
+  }
+  @media (min-width: 1680px) {
+    :root {
+      --sg: 26px;
+      --smh: 460px;
+      --fh: 500px;
+    }
+  }
+  @media (min-width: 1900px) {
+    :root {
+      --site-max: 1220px;
+    }
+  }
+  @media (min-width: 2560px) {
+    :root {
+      --site-max: 1500px;
+    }
+  }
+  @media (max-width: 900px) {
+    :root {
+      --card-width: min(calc(424px * var(--card-scale)), 84vw);
+    }
+  }
+  @media (max-width: 700px) {
+    :root {
+      --page-gutter: 16px;
+      --sw: 11px;
+      --sg: 16px;
+      --smh: 180px;
+      --so: 0.95;
+      --sr: 1;
+      --ss: 180ms;
+      --fh: 280px;
+      --fb: 11px;
+      --fl: 8px;
+      --card-width: min(calc(424px * var(--card-scale)), 76vw);
+      --card-height: calc(
+        (var(--card-width) * 505 / 424) + 48px * var(--card-scale)
+      );
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  html,
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    display: block;
+  }
+}
