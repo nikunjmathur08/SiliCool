@@ -8,24 +8,21 @@ export default function Footer() {
     <footer className="relative w-full overflow-x-clip">
       <div className={`relative z-[1] pt-[clamp(90px,15vw,240px)] max-[700px]:pt-20 ${SITE}`}>
         <h2 className={`m-0 text-left text-[clamp(44px,5vw,75px)] font-bold leading-[1.025] tracking-[-0.02em] text-black ${REVEAL}`}>
-          <span className="block">SiliCool is</span>
-          <span className="block">open-source.</span>
+          <span className="block">SiliCool is open-source.</span>
         </h2>
+
+        <span className="font-bold text-[50px] leading-[1.3] tracking-[-0.02em] text-black block">
+          Your Mac. Your fans. Your control.
+        </span>
 
         <div
           className={`mt-[19px] flex flex-wrap items-center justify-start gap-4 max-[700px]:mt-3.5 max-[700px]:gap-3 ${REVEAL} delay-[70ms]`}
         >
-          <Button glyph={appleGlyphWhite}>Download for Mac</Button>
-          <Button hug variant="secondary" href="https://github.com">
+          <Button>Download for Mac</Button>
+          <Button hug variant="secondary" href="https://github.com/nikunjmathur08/Silicool">
             GitHub
           </Button>
         </div>
-
-        <p
-          className={`mt-[26px] text-[15px] font-medium leading-[1.025] tracking-[-0.02em] text-muted ${REVEAL} delay-[120ms]`}
-        >
-          macOS 14 or later · Apple silicon · free and MIT licensed
-        </p>
       </div>
 
       <div className={`relative z-[1] mt-[clamp(64px,8vw,110px)] ${SITE}`}>
@@ -69,14 +66,14 @@ export default function Footer() {
         </nav>
 
         <div className="mt-3.5 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-caption max-[700px]:gap-x-5">
-          <span>© 2025 SiliCool. MIT Licensed.</span>
+          <span>© 2026 SiliCool. MIT Licensed.</span>
           <span>Not affiliated with Apple Inc.</span>
         </div>
       </div>
 
       <Frost
         variant="flip"
-        className="mt-[clamp(48px,6vw,80px)] max-[700px]:mt-10"
+        className="-mt-48"
       />
     </footer>
   );

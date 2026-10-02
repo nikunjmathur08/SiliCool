@@ -5,19 +5,19 @@ const faqs = [
   {
     question: "Can this damage my Mac?",
     answer:
-      "SiliCool can only ask for speeds between the minimum and maximum the fan itself reports. Thermal throttling is handled by your Mac’s firmware.",
+      "SiliCool only allows fan speeds within the minimum and maximum values reported by the fan controller. Your Mac's built-in thermal management continues to operate independently",
   },
   {
-    question: "macOS says it can’t verify the developer. Is that a problem?",
+    question: "macOS says it can't verify the developer. Is that a problem?",
     answer:
-      "It means SiliCool hasn’t been through Apple’s notarization service. To open it: System Settings › Privacy & Security › Open Anyway.",
+      "SiliCool is signed but hasn't been notarized by Apple yet. macOS may therefore show a security warning the first time you open it. To continue, open System Settings → Privacy & Security and click Open Anyway.",
   },
   {
     question: "Does it collect any data?",
     answer: (
       <>
-        No. No analytics, no telemetry, no accounts, and no networking code at
-        all — readings have no way to leave your Mac. See the{" "}
+        No. No analytics, no telemetry, no accounts and no networking code.
+        Sensor readings stay on your Mac and are never sent anywhere. See the{" "}
         <a className="text-accent underline underline-offset-4" href="/privacy.html">
           privacy page
         </a>
@@ -28,17 +28,22 @@ const faqs = [
   {
     question: "Why does it need an admin approval?",
     answer:
-      "Writing fan keys to the SMC requires root. SiliCool uses a small privileged helper rather than running the whole app as root.",
+      "Writing fan settings to the SMC requires elevated privileges. SiliCool uses a small privileged helper rather than running the whole app with elevated privileges.",
   },
   {
     question: "Does it work on Intel Macs?",
     answer:
-      "Not yet. The sensor naming and manual-mode key target Apple silicon.",
+      "Not yet. SiliCool currently targets Apple silicon, where the sensor layout and fan-control keys it relies on are available.",
   },
   {
     question: "What happens if I delete the app?",
     answer:
-      "Use Remove helper in Settings first — it returns the fans to automatic and unregisters the daemon.",
+      "Remove the helper from SiliCool's Settings before deleting the app. This returns the fans to automatic control and unregisters the privileged helper.",
+  },
+  {
+    question: "What happens if SiliCool quits unexpectedly?",
+    answer:
+      "On supported exit paths, SiliCool releases manual fan control before exiting. The one exception is SIGKILL, including Force Quit, which the app cannot intercept. If a fan remains held, reopen SiliCool and press Release, or restart your Mac.",
   },
 ];
 
@@ -52,8 +57,12 @@ export default function FAQ() {
         <p className={`${EYEBROW} ${REVEAL}`}>Questions</p>
 
         <h2 className={`${HEADLINE} ${REVEAL} delay-[70ms]`}>
-          Worth asking before installing a fan controller.
+          Questions worth asking.
         </h2>
+
+        <h3>
+          Before you give a fan controller access to your Mac.
+        </h3>
 
         <div
           className={`mt-[clamp(32px,4vw,48px)] border-t border-b border-line ${REVEAL} delay-[120ms]`}

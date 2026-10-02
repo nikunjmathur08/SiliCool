@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import BentoGrid from "./components/BentoGrid";
-import { Reads, Specs, Statement, Install } from "./components/Sections";
+import { Reads, Specs, Statement, Safety, Install } from "./components/Sections";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
@@ -61,8 +61,9 @@ export default function App() {
         <Reads />
         <Specs />
         <Statement />
-        <Install />
         <Statement force />
+        <Safety />
+        <Install />
         <FAQ />
       </main>
       <Footer />

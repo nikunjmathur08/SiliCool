@@ -7,52 +7,52 @@ const specCards = [
     icon: "wind-white.svg",
     label: "Fans found",
     value: "2 fans",
-    body: "SMC keys F0Ac, F0Mn and F0Mx — read on every sample.",
+    body: "Reads SMC keys F0Ac, F0Mn and F0Mx on every sample.",
   },
   {
     icon: "cpu-white.svg",
     label: "CPU cores",
     value: "15 cores",
-    body: "5 Super and 10 Performance, from hw.perflevelN — not a lookup table.",
+    body: "5 Super and 10 Performance, discovered through hw.perflevelN.",
   },
   {
     icon: "layers-white.svg",
     label: "GPU cores",
     value: "16 cores",
-    body: "IORegistry gpu-core-count, checked against 42 GPU probes.",
+    body: "Reads the GPU core count from IORegistry alognside 42 available GPU probes.",
   },
   {
     icon: "gauge-white.svg",
-    label: "Sample cost",
+    label: "Sample time",
     value: "15 ms",
-    body: "84 keys per sweep, run on a background task.",
+    body: "84 keys per sweep, processed on a background task.",
   },
   {
     icon: "antenna-white.svg",
-    label: "First scan",
+    label: "Initial scan",
     value: "2.8 s",
-    body: "Enumerate, then three sweeps to find duplicate keys.",
+    body: "Hardware is enumerated, then scanned three times to identify duplicates.",
   },
   {
     icon: "bolt-white.svg",
     label: "Idle footprint",
     value: "15 MB",
-    body: "Panel closed — the gauge stops when nobody is looking.",
+    body: "Monitoring pauses when the panel is closed and no readings are visible.",
   },
   {
     icon: "clock-white.svg",
     label: "History window",
     value: "10 minutes",
-    body: "14,400 bytes at 1 Hz, held in a fixed ring buffer.",
+    body: "14,400 bytes at 1 Hz, held in a fixed-size ring buffer.",
   },
 ];
 
 const safetyRules = [
-  ["Your Mac goes to sleep", "returned to automatic, then picked back up on wake"],
-  ["You quit it, or log out", "returned to automatic"],
-  ["Ctrl-C in a terminal", "returned to automatic"],
-  ["kill, or a system shutdown", "returned to automatic"],
-  ["Force Quit, kill -9", "not trappable by any app — see below"],
+  ["Your Mac goes to sleep", "Returned to automatic, then resumed on wake"],
+  ["You quit it, or log out", "Returned to automatic"],
+  ["Ctrl-C in a terminal", "Returned to automatic"],
+  ["kill, or a system shutdown", "Returned to automatic control when cleanup can"],
+  ["Force Quit, kill -9", "Cannot be intercepted, see below"],
 ];
 
 const CARD_ACCENT =
@@ -139,15 +139,13 @@ export function Reads() {
   return (
     <section id="reads" className="pb-[clamp(80px,12vw,170px)]">
       <div className={SITE}>
-        <p className={`${EYEBROW} ${REVEAL}`}>What it reads</p>
-
         <h2 className={`${HEADLINE} ${REVEAL} delay-[70ms]`}>
           One panel. No window to manage.
         </h2>
 
         <p className={`${BODY} ${REVEAL} delay-[120ms]`}>
-          Click the menu bar and the whole app is there — sensors grouped in a
-          fixed order, ten minutes of history, and the controls underneath.
+          Click the menu bar and the whole app is there. Sensors stay grouped
+          in a fixed order, with 10 minutes of history and fan controls above.
         </p>
       </div>
     </section>
@@ -175,41 +173,46 @@ export function Specs() {
       </div>
 
       <p className="mx-auto mt-[84px] w-[var(--site-width)] text-[15px] font-medium leading-[1.4] tracking-[-0.02em] text-secmuted max-[700px]:mt-16">
-        Taken on a MacBook — Mac17,9, M5 Pro, 24 GB. Yours will report its own.
+        Taken on a M5 Pro MacBook Pro. Yours will report its own.
       </p>
 
-      <div className="mx-auto mt-[clamp(80px,10vw,150px)] w-[var(--site-width)]">
-        <p className={`${EYEBROW} ${REVEAL}`}>Safety</p>
+    </section>
+  );
+}
 
-        <h2
-          className={`m-0 text-left text-[clamp(32px,4.16vw,60px)] font-bold leading-[1.025] tracking-[-0.02em] text-white ${REVEAL} delay-[70ms]`}
-        >
-          A pinned fan stays pinned.
-          <span className="block">So every exit hands it back.</span>
-        </h2>
+export function Safety() {
+  return (
+    <section className="mx-auto mt-[clamp(80px,10vw,150px)] w-[var(--site-width)]">
+      <p className={`${EYEBROW} ${REVEAL}`}>Safety</p>
 
-        <p
-          className={`mt-6 max-w-[560px] text-[clamp(18px,1.6vw,20px)] font-medium leading-[1.35] tracking-[-0.01em] text-[#ffffff78] ${REVEAL} delay-[120ms]`}
-        >
-          Fan settings outlive the process that made them. SiliCool treats that
-          as its problem, not yours.
-        </p>
+      <h2
+        className={`m-0 text-left text-[clamp(32px,4.16vw,60px)] font-bold leading-[1.025] tracking-[-0.02em] text-black ${REVEAL} delay-[70ms]`}
+      >
+        A pinned fan stays pinned.
+        <span className="block text-[#1f1f1f]">So every exit hands it back.</span>
+      </h2>
 
-        <div
-          className={`mt-11 max-w-[840px] border-t border-b border-[#ffffff1a] ${REVEAL} delay-[140ms]`}
-        >
-          {safetyRules.map(([action, result]) => (
-            <div
-              className="grid grid-cols-2 gap-8 border-b border-[#ffffff1a] py-5 last:border-b-0 max-[900px]:grid-cols-1 max-[900px]:gap-1"
-              key={action}
-            >
-              <div className="font-semibold tracking-[-0.01em] text-white">
-                {action}
-              </div>
-              <div className="text-[#ffffff78]">{result}</div>
+      <p
+        className={`mt-6 max-w-[560px] text-[clamp(18px,1.6vw,20px)] font-medium leading-[1.35] tracking-[-0.01em] text-[#4b4b4b] ${REVEAL} delay-[120ms]`}
+      >
+        Fan settings outlive the process that made them. SiliCool treats that
+        as its problem, not yours.
+      </p>
+
+      <div
+        className={`mt-11 max-w-[840px] border-t border-b border-[#1111111a] ${REVEAL} delay-[140ms]`}
+      >
+        {safetyRules.map(([action, result]) => (
+          <div
+            className="grid grid-cols-2 gap-8 border-b border-[#1111111a] py-5 last:border-b-0 max-[900px]:grid-cols-1 max-[900px]:gap-1"
+            key={action}
+          >
+            <div className="font-semibold tracking-[-0.01em] text-black">
+              {action}
             </div>
-          ))}
-        </div>
+            <div className="text-[#4b4b4b]">{result}</div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -222,9 +225,9 @@ export function Statement({ force = false }) {
         {force ? (
           <>
             Force Quit cuts the line.
-            <span className="text-soft">
+            <span className="text-body">
               {" "}
-              Every other exit hands the fans back.
+              Supported exits hand the fans back.
             </span>
           </>
         ) : (
@@ -240,20 +243,19 @@ export function Statement({ force = false }) {
             <code className="rounded-md bg-[#dde7f1] px-[7px] py-[2px] font-mono text-[0.86em]">
               SIGKILL
             </code>{" "}
-            is the one signal no process can catch — the OS terminates it
+            is the one signal no process can catch the OS terminates it
             before it can react. If you force quit SiliCool while a fan is
-            held, the hold persists because nothing remains to release it. To
-            recover: reopen SiliCool and press{" "}
+            held, the hold persists because nothing remains to release it. <br/>
+            To recover: reopen SiliCool and press{" "}
             <strong>Release</strong>, or restart your Mac. Every other exit
             path returns the fans to automatic first.
           </>
         ) : (
           <>
-            Your Mac exposes 42 GPU die sensors and has 16 GPU cores. Nothing
-            published says which sensor sits on which core — so SiliCool only
-            calls something a core when the count matches what the OS reports,
-            and labels the rest as probes rather than inventing hardware you
-            don’t have.
+            Your Mac exposes 42 GPU-related sensors but reports 16 GPU cores. There is
+            no published mapping showing which sensors corresponds to which core. SiliCool
+            labels these readings as probes, not individual cores, unless the reported count
+            provides a reliable match.
           </>
         )}
       </p>
@@ -308,8 +310,8 @@ export function Install() {
         </h2>
 
         <p className={`${BODY} ${REVEAL} delay-[120ms]`}>
-          Sensors work the second you open it. Fan control needs one approval,
-          because writing to the SMC requires root.
+          Sensors work as soon as you open SiliCool. Fan control requires an additional approval
+          controlling the SMC requires elevated privileges.
         </p>
 
         <div
@@ -335,7 +337,7 @@ export function Install() {
           <div className="flex h-[111px] w-[113px] shrink-0 overflow-clip max-[700px]:size-[70px] max-[700px]:h-[70px] max-[700px]:w-[70px]">
             <img
               className="size-full object-contain"
-              src="/assets/icon.png"
+              src="/assets/glyphs/finder.svg"
               alt=""
             />
           </div>
@@ -343,8 +345,8 @@ export function Install() {
             Why does macOS warn about it?
           </p>
           <p className="m-0 ml-auto max-w-[448px] text-[clamp(24px,3.33vw,40px)] font-bold leading-[1.025] tracking-[-0.02em] text-[#215080] max-[700px]:ml-0">
-            SiliCool isn’t notarized yet. The app is signed, and the source is
-            public and MIT licensed if you’d rather read it than trust it.
+            SiliCool isn't notarized yet. The app is signed and the source is
+            public under the MIT license, so you can inspect exactly what it does.
           </p>
         </div>
       </div>

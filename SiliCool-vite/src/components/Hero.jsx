@@ -21,10 +21,14 @@ export default function Hero() {
         </span>
       </h1>
 
+      <h2>
+        Take control of your Mac's fans without giving up macOS's automatic control.
+      </h2>
+
       <div
-        className={`relative z-[1] mt-[30px] flex flex-wrap items-center justify-start gap-4 max-[700px]:mt-[14px] max-[700px]:w-full ${REVEAL} delay-[70ms]`}
+        className={`relative z-[1] mt-[10px] flex flex-wrap items-center justify-start gap-4 max-[700px]:mt-[14px] max-[700px]:w-full ${REVEAL} delay-[70ms]`}
       >
-        <Button hero className="max-[700px]:hidden" glyph={appleGlyphWhite}>
+        <Button hero className="max-[700px]:hidden">
           Download for Mac
         </Button>
 
@@ -32,19 +36,13 @@ export default function Hero() {
           <Button hero hug variant="secondary" href="https://github.com/nikunjmathur08/Silicool">
             GitHub
           </Button>
-          <Button hero hug variant="secondary" href="#reads">
-            256 sensors
-          </Button>
-          <Button hero hug variant="secondary" href="#specs">
-            15 MB
-          </Button>
         </div>
       </div>
 
       <p
         className={`relative z-[1] mt-5 text-[15px] font-medium leading-[1.025] tracking-[-0.02em] text-muted max-[700px]:mt-4 max-[700px]:text-[14px] ${REVEAL} delay-[120ms]`}
       >
-        macOS 14 or later · Apple silicon · free and MIT licensed
+        macOS 14 + · Apple silicon · Free ·  MIT licensed
       </p>
 
       <div
