@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import { appleGlyphWhite } from "./glyphs";
 import Frost from "./FrostStrips.jsx";
@@ -27,42 +28,48 @@ export default function Footer() {
 
       <div className={`relative z-[1] mt-[clamp(64px,8vw,110px)] ${SITE}`}>
         <nav className="flex flex-wrap gap-x-8 gap-y-[14px] border-t border-line pt-8 max-[700px]:gap-x-5 max-[700px]:gap-y-3">
-          <a
+          <Link
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="#reads"
+            to="/reads"
           >
             What it reads
-          </a>
+          </Link>
           <a
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="https://github.com"
+            href="https://github.com/nikunjmathur08/Silicool"
           >
             GitHub
           </a>
-          <a
+          <Link
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="#install"
+            to="/install"
           >
             Install
-          </a>
+          </Link>
           <a
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="https://github.com/releases"
+            href="https://github.com/nikunjmathur08/Silicool/releases"
           >
             Releases
           </a>
-          <a
+          <Link
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="#faq"
+            to="/faq"
           >
             FAQ
-          </a>
-          <a
+          </Link>
+          <Link
             className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
-            href="/privacy.html"
+            to="/privacy"
           >
             Privacy
-          </a>
+          </Link>
+          <Link
+            className="text-[15px] font-medium tracking-[-0.01em] text-muted no-underline transition-colors duration-200 hover:text-accent"
+            to="/terms"
+          >
+            Terms
+          </Link>
         </nav>
 
         <div className="mt-3.5 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-caption max-[700px]:gap-x-5">

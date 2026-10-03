@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { plusCircle } from "./glyphs";
 import { SITE, REVEAL, EYEBROW, HEADLINE } from "../variants";
 
@@ -18,9 +19,9 @@ const faqs = [
       <>
         No. No analytics, no telemetry, no accounts and no networking code.
         Sensor readings stay on your Mac and are never sent anywhere. See the{" "}
-        <a className="text-accent underline underline-offset-4" href="/privacy.html">
+        <Link className="text-accent underline underline-offset-4" to="/privacy">
           privacy page
-        </a>
+        </Link>
         .
       </>
     ),

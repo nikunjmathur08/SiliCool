@@ -82,10 +82,10 @@ struct PromoGauge: View {
             VStack(spacing: 2) {
                 HStack(alignment: .lastTextBaseline, spacing: 4) {
                     Text(verbatim: "\(Int(rpm))")
-                        .font(.system(size: diameter * 0.15, weight: .semibold, design: .rounded))
+                        .font(.system(size: diameter * 0.15, weight: .semibold, design: .default))
                         .monospacedDigit()
                     Text("rpm")
-                        .font(.system(size: diameter * 0.045, weight: .semibold, design: .rounded))
+                        .font(.system(size: diameter * 0.045, weight: .semibold, design: .default))
                         .foregroundStyle(.white.opacity(0.6))
                 }
                 .foregroundStyle(.white)
@@ -105,15 +105,15 @@ struct Caption: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             Text(kicker.uppercased())
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.system(size: 15, weight: .semibold, design: .default))
                 .tracking(2.4)
                 .foregroundStyle(Color(red: 0.35, green: 0.66, blue: 1))
             Text(headline)
-                .font(.system(size: 54, weight: .semibold, design: .rounded))
+                .font(.system(size: 54, weight: .semibold, design: .default))
                 .foregroundStyle(.white)
                 .fixedSize(horizontal: false, vertical: true)
             Text(body_)
-                .font(.system(size: 21, weight: .regular, design: .rounded))
+                .font(.system(size: 21, weight: .regular, design: .default))
                 .foregroundStyle(.white.opacity(0.55))
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -149,10 +149,10 @@ struct Film: View {
                     PromoGauge(rpm: 2317 + 2600 * ramp(t, 0.4, 3.2), minimumRPM: 2317,
                                maximumRPM: 7826, phase: phase, thermalLoad: 0.25, diameter: 260)
                     Text("SiliCool")
-                        .font(.system(size: 76, weight: .semibold, design: .rounded))
+                        .font(.system(size: 76, weight: .semibold, design: .default))
                         .foregroundStyle(.white)
                     Text("Fan and thermal telemetry for Apple silicon")
-                        .font(.system(size: 24, design: .rounded))
+                        .font(.system(size: 24, design: .default))
                         .foregroundStyle(.white.opacity(0.5))
                 }
                 .opacity(window(t, 0, 4.6))
@@ -185,10 +185,10 @@ struct Film: View {
             // 5. End card
             VStack(spacing: 22) {
                 Text("SiliCool")
-                    .font(.system(size: 62, weight: .semibold, design: .rounded))
+                    .font(.system(size: 62, weight: .semibold, design: .default))
                     .foregroundStyle(.white)
                 Text("Free · Apple silicon · macOS 14 and later")
-                    .font(.system(size: 23, design: .rounded))
+                    .font(.system(size: 23, design: .default))
                     .foregroundStyle(.white.opacity(0.5))
             }
             .opacity(window(t, 20.2, 24.0, fade: 0.6))

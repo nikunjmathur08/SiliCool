@@ -88,7 +88,7 @@ function FlipCard({ icon, label, value, body, index }) {
             <img
               className="h-full w-auto object-contain"
               src={`/assets/glyphs/${icon}`}
-              alt=""
+              alt={`${label} icon`}
             />
           </div>
           <div className="mt-[calc(26px*var(--card-scale))] max-[900px]:mt-[calc(24px*var(--card-scale))]">
@@ -112,7 +112,7 @@ function FlipCard({ icon, label, value, body, index }) {
             <img
               className="h-full w-auto object-contain"
               src={`/assets/glyphs/${icon}`}
-              alt=""
+              alt={`${label} icon back`}
             />
           </div>
           <div className="mt-[calc(26px*var(--card-scale))] max-[900px]:mt-[calc(24px*var(--card-scale))]">
@@ -338,7 +338,7 @@ export function Install() {
             <img
               className="size-full object-contain"
               src="/assets/glyphs/finder.svg"
-              alt=""
+              alt="Finder icon"
             />
           </div>
           <p className="m-0 max-w-[328px] text-[clamp(24px,3.33vw,40px)] font-bold leading-[1.025] tracking-[-0.02em] text-[#091c2f]">

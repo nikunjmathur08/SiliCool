@@ -44,10 +44,10 @@ struct DMGBackground: View {
                         .frame(width: logoPointSize, height: logoPointSize)
 
                     Text("SiliCool")
-                        .font(.system(size: 21, weight: .semibold, design: .rounded))
+                        .font(.system(size: 21, weight: .semibold, design: .default))
                         .foregroundStyle(.white)
                     Text("Fan control for Apple silicon")
-                        .font(.system(size: 12, design: .rounded))
+                        .font(.system(size: 12, design: .default))
                         .foregroundStyle(.white.opacity(0.45))
                 }
                 .padding(.top, 34)
@@ -55,7 +55,7 @@ struct DMGBackground: View {
                 Spacer()
 
                 Text("Drag SiliCool into Applications")
-                    .font(.system(size: 12.5, weight: .medium, design: .rounded))
+                    .font(.system(size: 12.5, weight: .medium, design: .default))
                     .foregroundStyle(.white.opacity(0.62))
                     .padding(.bottom, 30)
             }

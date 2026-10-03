@@ -1,4 +1,0 @@
-Target dependency graph (2 targets)
-Target 'SiliCool' in project 'SiliCool'
-➜ Explicit dependency on target 'SiliCoolHelper' in project 'SiliCool'
-Target 'SiliCoolHelper' in project 'SiliCool' (no dependencies)

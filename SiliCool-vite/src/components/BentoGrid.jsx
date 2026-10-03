@@ -36,7 +36,7 @@ export default function BentoGrid() {
                   <img
                     className="size-full object-contain"
                     src="/assets/icon.png"
-                    alt=""
+                    alt="SiliCool icon"
                   />
                 </div>
                 <p className="m-0 text-[clamp(15px,1.66vw,20px)] leading-[1.025] tracking-[-0.05em] text-[#353535]">
@@ -96,7 +96,7 @@ export default function BentoGrid() {
                     <img
                       className="h-full w-auto object-contain"
                       src={`/assets/glyphs/${icon}`}
-                      alt=""
+                      alt={`${label} icon`}
                     />
                   </div>
                   <p className="m-0 text-[clamp(16px,2.16vw,26px)] font-bold leading-[1.025] tracking-[-0.02em] text-black">
@@ -132,7 +132,7 @@ export default function BentoGrid() {
             <img
               className="absolute inset-0 size-full object-cover"
               src="/assets/native-app.png"
-              alt=""
+              alt="SiliCool Native App Interface"
             />
             <h3 className="sr-only">Native App</h3>
           </div>

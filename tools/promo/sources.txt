@@ -11,6 +11,8 @@ SiliCool/Core/HardwareInventory.swift
 SiliCool/Core/SMCKeyCatalog.swift
 SiliCool/Core/SensorProbe.swift
 SiliCool/Core/HardwareMonitor.swift
+SiliCool/Core/InstallLocation.swift
+SiliCool/Core/Diagnostics.swift
 SiliCool/Core/ShutdownGuard.swift
 SiliCool/Core/PrivilegedFanControl.swift
 Shared/SMC.swift

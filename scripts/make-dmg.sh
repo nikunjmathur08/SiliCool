@@ -14,7 +14,8 @@ APP_PATH="${1:?usage: make-dmg.sh <path to SiliCool.app> [output.dmg]}"
 OUTPUT="${2:-build/SiliCool.dmg}"
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BACKGROUND="$ROOT/packaging/dmg-background.tiff"
+# Override to preview a candidate artwork without touching packaging/.
+BACKGROUND="${BACKGROUND:-$ROOT/packaging/dmg-background.png}"
 VOLUME_NAME="SiliCool"
 STAGING="$(mktemp -d)"
 TEMP_DMG="$(mktemp -u).dmg"
@@ -28,7 +29,7 @@ trap cleanup EXIT
 echo "==> Staging"
 mkdir -p "$STAGING/.background"
 cp -R "$APP_PATH" "$STAGING/SiliCool.app"
-cp "$BACKGROUND" "$STAGING/.background/background.tiff"
+cp "$BACKGROUND" "$STAGING/.background/background.png"
 ln -s /Applications "$STAGING/Applications"
 
 # A read-write image first, so the Finder view settings can be written into it.
@@ -62,13 +63,13 @@ tell application "Finder"
         set current view of container window to icon view
         set toolbar visible of container window to false
         set statusbar visible of container window to false
-        -- 660x420 content area, matching the background image
-        set the bounds of container window to {200, 140, 860, 560}
+        -- 660x420 content area + 28px title bar
+        set the bounds of container window to {200, 140, 860, 588}
         set viewOptions to the icon view options of container window
         set arrangement of viewOptions to not arranged
         set icon size of viewOptions to 112
         set text size of viewOptions to 12
-        set background picture of viewOptions to file ".background:background.tiff"
+        set background picture of viewOptions to file ".background:background.png"
         set position of item "SiliCool.app" of container window to {165, 205}
         set position of item "Applications" of container window to {495, 205}
         close

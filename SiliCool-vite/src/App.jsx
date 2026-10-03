@@ -1,71 +1,26 @@
-import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import BentoGrid from "./components/BentoGrid";
-import { Reads, Specs, Statement, Safety, Install } from "./components/Sections";
-import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
-  useEffect(() => {
-    const targets = document.querySelectorAll(".js-reveal, [data-flip]");
-    const flips = document.querySelectorAll("[data-flip]");
-
-    if (
-      matchMedia("(prefers-reduced-motion: reduce)").matches ||
-      !("IntersectionObserver" in window)
-    ) {
-      targets.forEach((el) => el.classList.add("is-in"));
-      flips.forEach((el) => el.classList.add("is-settled"));
-      return;
-    }
-
-    const timers = [];
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const el = entry.target;
-          el.classList.add("is-in");
-
-          if (el.hasAttribute("data-flip")) {
-            const stagger =
-              parseInt(el.style.getPropertyValue("--flip-delay"), 10) || 0;
-            timers.push(
-              window.setTimeout(() => el.classList.add("is-settled"), stagger + 800)
-            );
-          }
-
-          io.unobserve(el);
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
-    );
-
-    targets.forEach((el) => io.observe(el));
-
-    return () => {
-      io.disconnect();
-      timers.forEach((t) => window.clearTimeout(t));
-    };
-  }, []);
-
   return (
     <div className="bg-bg text-fg font-sans text-[17px] leading-[1.6] max-[640px]:text-[16px] antialiased overflow-x-clip">
       <Nav />
-      <main>
-        <Hero />
-        <BentoGrid />
-        <Reads />
-        <Specs />
-        <Statement />
-        <Statement force />
-        <Safety />
-        <Install />
-        <FAQ />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/design" element={<Home />} />
+        <Route path="/specs" element={<Home />} />
+        <Route path="/faq" element={<Home />} />
+        <Route path="/reads" element={<Home />} />
+        <Route path="/install" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );
